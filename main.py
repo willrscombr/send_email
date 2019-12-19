@@ -9,9 +9,11 @@ def main():
     
     title = "Sistema de Envio de E-mail Automático - IFGOIANO - Campus Iporá"
     msg = "Olá essse é um e-mail teste. Se recebeu esse e-mail por favor ignore. Criado por Wilton Ribeiro Silva"
+    
     list_emails = list()
+    
     list_receivers = read_files_receivers('dados.csv') or []
-    #rint(list_receivers[0][1])
+ 
     for receiver in list_receivers:
         
         if len(receiver) == 2:
@@ -26,7 +28,7 @@ def main():
 
     for email in list_emails:
         send_email(email, password)
-        #print(email.attachments)
+        
         
 
 
